@@ -1,0 +1,447 @@
+$headings: (h1: 3.5em,
+    h2: 2em,
+    h3: 1.75em,
+    h4: 1.50em,
+    h5: 1.25em);
+
+$h1: map-get($headings, 'h1');
+$h2: map-get($headings, 'h2');
+$h3: map-get($headings, 'h3');
+$h4: map-get($headings, 'h4');
+$h5: map-get($headings, 'h5');
+
+$colors: (principal: #ffa8cd,
+    secundario: #e2b0f2,
+);
+
+
+$primary: map-get($colors, 'principal');
+$secundary: map-get($colors, 'secundario');
+
+$font-family-sans-serif:'Playfair Display';
+
+$textsize: 1rem;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+    font-weight: 500;
+    overflow-x: hidden;
+}
+
+/* ESTILOS HEADER */
+
+header .navbar .navbar-brand {
+    border-bottom: 5px solid $primary;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: $primary;
+
+    }
+
+}
+
+
+/* ESTILOS HOME  PRIMER ENCABEZADO*/
+
+
+.jumbotron {
+    background-color: $primary;
+    color: #FFF;
+    min-height: 80vh;
+    margin-bottom: 0px;
+
+    h1::after {
+        display: inline-block;
+        content: "";
+        white-space: pre-wrap;
+        animation-duration: 3s;
+        animation-name: bienvenida;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        min-height: 172px;
+    }
+
+    p {
+        font-size: $textsize*2;
+    }
+}
+
+
+@keyframes bienvenida {
+
+    0% {
+        content: "H";
+    }
+
+
+    10% {
+        content: "Ho";
+    }
+
+    20% {
+        content: "Hol";
+    }
+
+    30% {
+        content: "Hola";
+    }
+
+    40% {
+        content: "Hola!";
+    }
+
+    50% {
+        content: "Hola!\AS";
+    }
+
+    60% {
+        content: "Hola!\ASo";
+    }
+
+    70% {
+        content: "Hola!\ASoy T";
+    }
+
+    80% {
+        content: "Hola!\ASoy Ta";
+    }
+
+    90% {
+        content: "Hola!\ASoy Tam";
+    }
+
+    100% {
+        content: "Hola!\ASoy Tami";
+    }
+}
+
+/* ESTILOS HOME SOBRE MI */
+
+
+.container {
+    margin: auto;
+}
+
+
+.container__texto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+
+}
+
+.img-tati-home {
+    border-radius: 47%;
+}
+
+/* ESTILOS HOME SERVICIOS */
+
+.freight_section {
+    position: relative;
+    top: -125px;
+    z-index: 9;
+}
+
+.bannerHome {
+    padding-bottom: 4rem;
+
+    h1 {
+        color: black;
+        font-size: $h1;
+        text-align: center;
+    }
+
+    .freight_section {
+        top: 0px;
+
+        .freight_text {
+            p {
+                font-family: 'Roboto', sans-serif;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+
+.freight_section .row {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.freight_section .col-lg-4.col-md-4.col-sm-6 {
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.single_freight {
+    background: #ffffff;
+    padding: 25px;
+    transition: .3s;
+
+    &:hover {
+        box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.3);
+
+        & .freight_thumb {
+            & img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.freight_thumb {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+    & img {
+        width: 80px;
+        transition: .3s;
+    }
+}
+
+.freight_text {
+    padding: 30px 0 0;
+}
+
+.freight_text p {
+    font-size: $textsize;
+    line-height: 24px;
+    color: #818181;
+    margin-bottom: 0;
+}
+
+.freight_text a {
+    font-size: $textsize;
+    line-height: 30px;
+    font-weight: 700;
+    color: #999999;
+    text-transform: uppercase;
+    margin-top: 26px;
+    display: inline-block;
+
+    &:hover {
+        color: $secundary;
+    }
+
+}
+
+
+
+/* ESTILOS SECCION SOBRE MI */
+
+.featurette-divider {
+    margin: 2rem 0;
+}
+
+
+.sobremi {
+    margin: auto;
+    .img-flores {
+        width: 370px;
+    }
+}
+
+.sobremi__title {
+    font-weight: 300;
+    letter-spacing: -.05rem;
+    font-size: $h2;
+}
+
+
+.sobremi__text {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* ESTILOS SECCION BLOG */
+
+.blog {
+    margin: auto;
+
+    .blog__title {
+        font-family: 'Roboto', sans-serif;
+        font-size: $h4;
+    }
+}
+
+.textoBlog {
+    font-family: 'Roboto', sans-serif;
+}
+
+.cajaBlog {
+    transition: all 1s;
+
+}
+
+.cajaBlog div:hover {
+    transform: scale(1);
+}
+
+/* ESTILOS SUSCRIPCION HOME */
+
+
+.suscripcion {
+    background-color: $primary;
+    .btn-sus{
+        background-color: #4e4e4e ;
+        color: #FFF;
+        font-family: 'Roboto', sans-serif;
+    }
+    input {
+    font-family: 'Roboto', sans-serif;
+    }
+}
+
+.suscripcion__title {
+    color: #4e4e4e;
+    font-size: $h3;
+}
+
+
+
+
+/* ESTILOS FOOTER */
+footer {
+    .row .col-sm {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .col-redes {
+        margin: auto;
+        align-items: center;
+        ul {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            li {
+                display: inline-block;
+                a { 
+                    display: block;
+                    background: #4e4e4e;
+                    padding: 10px;
+                    border-radius: 50%;
+                    &:hover {
+                        background-color: $primary;
+                    }
+                    i {
+                        width: 20px;
+                        font-size: $textsize;
+                        text-align: center;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+.container-fluid .row .navbar-brand {
+    border-bottom: 5px solid #f1a3c4;
+    color: black;
+    padding-bottom: 0px;
+    font-size: $textsize+0.4rem;
+}
+
+
+footer .col-contacto h3 {
+    font-size: $textsize+0.3rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+footer .col-contacto ul {
+    list-style: none;
+    font-size: $textsize+0.30rem;
+    line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ESTILOS SECCION CONTACTO */
+
+.contacto{
+    padding: 3rem 0rem;
+    .form-co {
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+
+/* SECCION SERVICIOS */
+
+
+.services_text {
+    padding: 30px 0 0;
+}
+
+.services_text p {
+    font-size: $textsize;
+    line-height: 24px;
+    color: #818181;
+    margin-bottom: 0;
+}
+
+#testimonials {
+    padding-bottom: 5rem;
+}
+
+#testimonials .cardTest {
+    border: 0;
+}
+
+.cardTest {
+    text-align: center;
+}
+
+.cardTest img {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 9rem;
+    max-height: 9rem;
+    margin: 0 auto;
+}
+
+._tm-user-role {
+    font-weight: bold;
+}
+
+._tm-header {
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+/* SECION 404 */
+
+.container-404 {
+    text-align: center;
+    padding: 10rem;
+    margin: auto;
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    p {
+        font-size: $h3;
+    }
+
+    .boton404 {
+        font-size: $h4;
+        font-family: 'Roboto', sans-serif;
+    }
+}
