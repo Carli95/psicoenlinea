@@ -7349,11 +7349,8 @@ a {
 .textoBlog {
   font-family: 'Roboto', sans-serif; }
 
-.cajaBlog {
-  transition: all 1s; }
-
-.cajaBlog div:hover {
-  transform: scale(1); }
+.btn-blog {
+  color: #212529; }
 
 /* ESTILOS SUSCRIPCION HOME */
 .suscripcion {
@@ -7431,19 +7428,18 @@ footer .col-contacto ul {
 
 #testimonials {
   padding-bottom: 5rem; }
-
-#testimonials .cardTest {
-  border: 0; }
-
-.cardTest {
-  text-align: center; }
-
-.cardTest img {
-  border-radius: 50%;
-  width: 100%;
-  max-width: 9rem;
-  max-height: 9rem;
-  margin: 0 auto; }
+  #testimonials .col-ser {
+    display: flex;
+    justify-content: center; }
+  #testimonials .cardTest {
+    border: 0;
+    text-align: center; }
+    #testimonials .cardTest img {
+      border-radius: 50%;
+      width: 100%;
+      max-width: 9rem;
+      max-height: 9rem;
+      margin: 0 auto; }
 
 ._tm-user-role {
   font-weight: bold; }

@@ -139,6 +139,7 @@ a {
     border-radius: 47%;
 }
 
+
 /* ESTILOS HOME SERVICIOS */
 
 .freight_section {
@@ -280,13 +281,9 @@ a {
     font-family: 'Roboto', sans-serif;
 }
 
-.cajaBlog {
-    transition: all 1s;
 
-}
-
-.cajaBlog div:hover {
-    transform: scale(1);
+.btn-blog {
+    color: #212529;
 }
 
 /* ESTILOS SUSCRIPCION HOME */
@@ -398,23 +395,23 @@ footer .col-contacto ul {
 
 #testimonials {
     padding-bottom: 5rem;
+    .col-ser{
+        display: flex;
+        justify-content: center;
+    }
+    .cardTest {
+        border: 0;
+        text-align: center;
+        img {
+            border-radius: 50%;
+            width: 100%;
+            max-width: 9rem;
+            max-height: 9rem;
+            margin: 0 auto;
+        }
+    }
 }
 
-#testimonials .cardTest {
-    border: 0;
-}
-
-.cardTest {
-    text-align: center;
-}
-
-.cardTest img {
-    border-radius: 50%;
-    width: 100%;
-    max-width: 9rem;
-    max-height: 9rem;
-    margin: 0 auto;
-}
 
 ._tm-user-role {
     font-weight: bold;
