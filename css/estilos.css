@@ -7304,12 +7304,11 @@ a {
 
 .freight_text {
   padding: 30px 0 0; }
-
-.freight_text p {
-  font-size: 1rem;
-  line-height: 24px;
-  color: #818181;
-  margin-bottom: 0; }
+  .freight_text p {
+    font-size: 1rem;
+    line-height: 24px;
+    color: #818181;
+    margin-bottom: 0; }
 
 .freight_text a {
   font-size: 1rem;
@@ -7345,9 +7344,8 @@ a {
   .blog .blog__title {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em; }
-
-.textoBlog {
-  font-family: 'Roboto', sans-serif; }
+  .blog .textoBlog {
+    font-family: 'Roboto', sans-serif; }
 
 .btn-blog {
   color: #212529; }
@@ -7419,12 +7417,11 @@ footer .col-contacto ul {
 /* SECCION SERVICIOS */
 .services_text {
   padding: 30px 0 0; }
-
-.services_text p {
-  font-size: 1rem;
-  line-height: 24px;
-  color: #818181;
-  margin-bottom: 0; }
+  .services_text p {
+    font-size: 1rem;
+    line-height: 24px;
+    color: #818181;
+    margin-bottom: 0; }
 
 #testimonials {
   padding-bottom: 5rem; }
