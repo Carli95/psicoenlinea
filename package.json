@@ -1,7 +1,7 @@
 {
-  "name": "coder-clases",
+  "name": "Psienlinea",
   "version": "1.0.0",
-  "description": "",
+  "description": "package.json de los assets de Psienline sitio web, en este se compila el Sass de la web y el Sass de bootstrap",
   "main": "index.js",
   "scripts": {
     "build-css": "node-sass --include-path scss scss/principal.scss css/estilos.css",
