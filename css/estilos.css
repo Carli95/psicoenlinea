@@ -7258,7 +7258,7 @@ a {
 /* ESTILOS HOME SERVICIOS */
 .freight_section {
   position: relative;
-  top: -125px;
+  top: -7.8rem;
   z-index: 9; }
 
 .bannerHome {
@@ -7271,26 +7271,26 @@ a {
     top: 0px; }
     .bannerHome .freight_section .freight_text p {
       font-family: 'Roboto', sans-serif;
-      line-height: 20px; }
+      line-height: 1.25rem; }
 
 .freight_section .row {
-  margin-right: -15px;
-  margin-left: -15px;
-  margin-right: -12px;
-  margin-left: -12px; }
+  margin-right: -1rem;
+  margin-left: -1rem;
+  margin-right: 0.8rem;
+  margin-left: -0.8rem; }
 
 .freight_section .col-lg-4.col-md-4.col-sm-6 {
-  padding-right: 15px;
-  padding-left: 15px;
-  padding-right: 12px;
-  padding-left: 12px; }
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-right: 0.8rem;
+  padding-left: 0.8rem; }
 
 .single_freight {
   background: #ffffff;
-  padding: 25px;
+  padding: 1.5rem;
   transition: .3s; }
   .single_freight:hover {
-    box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.3); }
+    box-shadow: 0rem 2.5rem 5rem 0rem rgba(0, 0, 0, 0.3); }
     .single_freight:hover .freight_thumb img {
       transform: scale(1.1); }
 
@@ -7299,24 +7299,24 @@ a {
   display: flex;
   justify-content: center; }
   .freight_thumb img {
-    width: 80px;
+    width: 5rem;
     transition: .3s; }
 
 .freight_text {
-  padding: 30px 0 0; }
+  padding: 1.8rem 0 0; }
   .freight_text p {
     font-size: 1rem;
-    line-height: 24px;
+    line-height: 1.5rem;
     color: #818181;
     margin-bottom: 0; }
 
 .freight_text a {
   font-size: 1rem;
-  line-height: 30px;
+  line-height: 1.8rem;
   font-weight: 700;
   color: #999999;
   text-transform: uppercase;
-  margin-top: 26px;
+  margin-top: 1.6rem;
   display: inline-block; }
   .freight_text a:hover {
     color: #e2b0f2; }
@@ -7328,7 +7328,7 @@ a {
 .sobremi {
   margin: auto; }
   .sobremi .img-flores {
-    width: 370px; }
+    width: 323rem; }
 
 .sobremi__title {
   font-weight: 300;
@@ -7344,7 +7344,7 @@ a {
   .blog .blog__title {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em; }
-  .blog .textoBlog {
+  .blog .texto-blog {
     font-family: 'Roboto', sans-serif; }
 
 .btn-blog {
@@ -7366,35 +7366,36 @@ a {
 
 /* ESTILOS FOOTER */
 footer .row .col-sm {
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem; }
 
 footer .col-redes {
   margin: auto;
   align-items: center; }
   footer .col-redes ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none; }
+    margin: 0rem;
+    padding: 0rem;
+    list-style: none;
+    text-align: center; }
     footer .col-redes ul li {
       display: inline-block; }
       footer .col-redes ul li a {
         display: block;
         background: #4e4e4e;
-        padding: 10px;
+        padding: 0.6rem;
         border-radius: 50%; }
         footer .col-redes ul li a:hover {
           background-color: #ffa8cd; }
         footer .col-redes ul li a i {
-          width: 20px;
+          width: 1.25rem;
           font-size: 1rem;
           text-align: center;
           color: #FFF; }
 
 .container-fluid .row .navbar-brand, .container-sm .row .navbar-brand, .container-md .row .navbar-brand, .container-lg .row .navbar-brand, .container-xl .row .navbar-brand {
-  border-bottom: 5px solid #f1a3c4;
+  border-bottom: 0.3rem solid #f1a3c4;
   color: black;
-  padding-bottom: 0px;
+  padding-bottom: 0rem;
   font-size: 1.4rem; }
 
 footer .col-contacto h3 {
@@ -7405,7 +7406,7 @@ footer .col-contacto h3 {
 footer .col-contacto ul {
   list-style: none;
   font-size: 1.3rem;
-  line-height: 20px;
+  line-height: 1.25rem;
   font-family: 'Roboto', sans-serif; }
 
 /* ESTILOS SECCION CONTACTO */
@@ -7416,10 +7417,10 @@ footer .col-contacto ul {
 
 /* SECCION SERVICIOS */
 .services_text {
-  padding: 30px 0 0; }
+  padding: 1.8rem 0 0; }
   .services_text p {
     font-size: 1rem;
-    line-height: 24px;
+    line-height: 1.5rem;
     color: #818181;
     margin-bottom: 0; }
 
