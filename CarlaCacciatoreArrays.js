@@ -4,15 +4,3 @@ let filtro = prompt ("¿Qué articulos estas buscando?")
 const arrayArticulos = Articulos.filter(articulo => articulo.nombre.includes(filtro))
 console.log(arrayArticulos)
 
-/*
-const arrayArticulos = Articulos.filter(articulo => articulo.nombre.includes("ansiedad"))
-console.log(arrayArticulos)
-const arrayArticulos = Articulos.filter(articulo => articulo.nombre.includes("ESI"))
-console.log(arrayArticulos)
-const arrayArticulos = Articulos.filter(articulo => articulo.nombre.includes("estres"))
-console.log(arrayArticulos)
-const arrayArticulos = Articulos.filter(articulo => articulo.nombre.includes("autoexigencia"))
-console.log(arrayArticulos)
-const arrayArticulos = Articulos.filter(articulo => articulo.nombre.includes("insomnio"))
-console.log(arrayArticulos)
-*/
