@@ -44,4 +44,4 @@ let horario = prompt("Tu horario de preferencia, indicando si es por la mañana 
 const turno1 = new turnoConfirmado(nombre, apellido, email, horario);
 
 
-console.log(turno1.datosTurno());
+console.log(turno1.datosTurno()); 
