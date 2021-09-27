@@ -140,18 +140,20 @@
     <div class="container">
       <h5 class="suscripcion__title text-center pt-2 mb-4">
         SUSCRIBITE PARA RECIBIR NOVEDADES</h5>
-      <form class=""  id="miFormulario">
+      <form class="" id="miFormulario">
         <div class="row align-items-end">
 
           <div class="col-md-5">
             <div class="form-group">
-              <input placeholder="Nombre" type="text" required="required" class="form-control" autocomplete="Off" />
+              <input placeholder="Nombre" id="suscripcion_nombre" type="text" required="required" class="form-control"
+                autocomplete="Off" />
             </div>
           </div>
 
           <div class="col-md-5">
             <div class="form-group">
-              <input placeholder="Email" type="email" required="required" class="form-control" autocomplete="Off" />
+              <input placeholder="Email" id="suscripcion_email" type="email" required="required" class="form-control"
+                autocomplete="Off" />
             </div>
           </div>
           <div class="col-md-2">
@@ -159,7 +161,7 @@
               <button type="submit" class="btn-sus btn btn-block" id="suscripcion">
                 <i class="far fa-envelope"></i>
                 Suscribirme
-              </button>            
+              </button>
             </div>
           </div>
 
@@ -192,6 +194,22 @@
       </div>
     </div>
   </footer>
+  
+  <div class="modal fade" id="suscripcion_modal" tabindex="-1" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">GRACIAS POR SUSCRIBIRSE</h5>
+        </div>
+        <div class="modal-body">
+          <span id="suscripcion_modal_nombre"></span> proximamente estara recibiendo información
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--FINAL FOOTER-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

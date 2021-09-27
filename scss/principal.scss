@@ -446,6 +446,10 @@ footer .col-contacto ul {
 
 /* SECION MODAL */
 
-.show {
-    visibility: visible;
+.modal {
+    display: inline-block;
+    justify-content: center;
+    background-color: #e2b0f2;
+    width: 500px;
+    height: 200px;
 }

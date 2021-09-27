@@ -1,16 +1,30 @@
-let suscripcion = document.getElementById("suscripcion");
-let modal = document.getElementById("miModal")
+document.getElementById("miFormulario").addEventListener("submit", (e) => {
 
+    /* No enviar el formulario */
+    e.preventDefault();
 
+    /* Campos */
+    const nombre = document.getElementById("suscripcion_nombre");
+    const email = document.getElementById("suscripcion_email");
 
-suscripcion.onclick = () =>{
-    modal.classList.add('show');
-}
+    /* Modal */
+    document.getElementById("suscripcion_modal_nombre").innerHTML = nombre.value;
+    $('#suscripcion_modal').modal('show')
+
+    /* Limpiar campos */
+    nombre.value = "";
+    email.value = "";
+});
 
 
 /*
 
+suscripcion.onclick = () =>{
+    modal.style.display = block ;
+}
 
+
+    modal.classList.remove('noshow');
 style.visibility = "visible"
 miFormulario.addEventListener("submit", validarFormulario);
 
