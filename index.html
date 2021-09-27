@@ -36,16 +36,16 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="servicios.html">Servicios</a>
+            <a class="nav-link" href="pages/servicios.html">Servicios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sobre_mi.html">Sobre mi</a>
+            <a class="nav-link" href="pages/sobre_mi.html">Sobre mi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog</a>
+            <a class="nav-link" href="pages/blog.html">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contacto.html">Contacto</a>
+            <a class="nav-link" href="pages/contacto.html">Contacto</a>
           </li>
         </ul>
       </div>
@@ -74,7 +74,7 @@
             descubriendo este hermoso mundo de la psicología.<br>Realicé la carrera en la Universidad de
             Buenos Aires. Una vez recibida, continúe formándome y capacitándome en diferentes áreas como:
             psicodiagnóstico, orientación vocacional, intervención en TEA, recursos humanos, entre otros.</p>
-          <a href="sobre_mi.html" class="btn btn-primary btn-sm">Leer mas</a>
+          <a href="/pages/sobre_mi.html" class="btn btn-primary btn-sm">Leer mas</a>
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
                   <h3>Orientación <br> Vocacional</h3>
                   <p>A la hora de elegir un estudio, trabajo u ocupación, pueden aparecer dudas o conflictos al
                     respecto...</p>
-                  <a href="servicios.html">Leer mas</a>
+                  <a href="/pages/servicios.html">Leer mas</a>
                 </figcaption>
               </figure>
             </article>
@@ -110,7 +110,7 @@
                   <h3>Terapia <br> Online</h3>
                   <p>Un espacio donde te voy a escuchar y acompañar en el proceso de descubrir y superar tus miedos,
                     enojos, preocupaciones...</p>
-                  <a href="servicios.html">Leer mas</a>
+                  <a href="/pages/servicios.html">Leer mas</a>
                 </figcaption>
               </figure>
             </article>
@@ -140,7 +140,7 @@
     <div class="container">
       <h5 class="suscripcion__title text-center pt-2 mb-4">
         SUSCRIBITE PARA RECIBIR NOVEDADES</h5>
-      <form class="">
+      <form class=""  id="miFormulario">
         <div class="row align-items-end">
 
           <div class="col-md-5">
@@ -154,13 +154,12 @@
               <input placeholder="Email" type="email" required="required" class="form-control" autocomplete="Off" />
             </div>
           </div>
-
           <div class="col-md-2">
             <div class="form-group">
-              <button type="submit" class="btn-sus btn btn-block ">
+              <button type="submit" class="btn-sus btn btn-block" id="suscripcion">
                 <i class="far fa-envelope"></i>
                 Suscribirme
-              </button>
+              </button>            
             </div>
           </div>
 
@@ -200,7 +199,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
   </script>
-  <script src="Primerentregahome.js" ></script>
+  <script src="js/suscripcionevento.js" ></script>
 </body>
 
 </html>
