@@ -1,53 +1,118 @@
-class Carrito {
-    servicios = [{
-        id: 4567,
-        nombre: "Orientacion Proceso Largo",
-        precio: 500
-    }, {
-        id: 3456,
-        nombre: "Orientacion Proceso Corto",
-        precio: 300
-    }, {
-        id: 4050,
-        nombre: "Orientacion virtual",
-        precio: 250
-    }]
-    misServicios = []
-    agregarServicios(id) {
-        this.misServicios.push(id)
+const carrito = document.querySelector('#carrito');
+const contenedorCarrito = document.querySelector('#lista-carrito tbody')
+const vaciarCarritoBtn = document.querySelector('#vaciar-carrito');
+const listaOrientacion = document.querySelector('#lista-orientacion');
+let articulosCarrito = [];
+
+
+listaOrientacion.addEventListener(`click`, (e) => {
+    e.preventDefault();
+    if (e.target.classList.contains('comprar')) {
+        const orientacionSelecionada = e.target.parentElement.parentElement;
+        leerDatosOrientacion(orientacionSelecionada);
     }
-    calcularTotal() {
-        return  500
+})
+
+carrito.addEventListener(`click` , (e) => {
+    e.preventDefault();
+    if (e.target.classList.contains('borrar-curso')) {
+        const cursoId = e.target.getAttribute('data-id');
+        articulosCarrito = articulosCarrito.filter( orientacion => orientacion.id !== cursoId);
+        
+        carritoHTML(); 
     }
-    listadoServicios() {
-        const listado = this.servicios.map(servicio => `${servicio.id} - ${servicio.nombre}: ${servicio.precio}`)
-        return listado.join(", ")
+}
+)
+
+
+
+function leerDatosOrientacion(orientacion) {
+ 
+    const infoOrientacion = {
+        titulo: orientacion.querySelector('h4').textContent,
+        precio: orientacion.querySelector('h1').textContent,
+        id: orientacion.querySelector('button').value,
+        cantidad: 1
     }
-    validarCodigoServicio(id) {
-        const filtrados = this.servicios.filter(servicio=> servicio.id== id)
-            return filtrados.length == 1
+
+    const existe = articulosCarrito.some(orientacion => orientacion.id === infoOrientacion.id);
+    if (existe) {
+        articulosCarrito = articulosCarrito.map(orientacion => {
+            if (orientacion.id === orientacion.id) {
+                orientacion.cantidad++;
+            }
+            return orientacion
+        });
+
+    } else {
+
+        articulosCarrito.push(infoOrientacion)
     }
+
+ 
+    carritoHTML();
 
 }
 
 
-    const miCarrito = new Carrito()
-    /*Paso 1 : llenar carrito */
-    alert("Bienvenido al carro de compras,ingrese el codigo de producto")
+function carritoHTML() {
 
-    let confirmar = false
-    do {
-        let idUsuario = prompt(miCarrito.listadoServicios())
-        if (miCarrito.validarCodigoServicio(idUsuario)) {
-            miCarrito.agregarServicios(idUsuario)
-            confirmar = confirm("¿Desea confirmar la compra?")
-        } else {
-            alert("Servicio no encontrado")
-        }
+    // Limpiar el HTML
+    limpiarHTML();
 
-    } while (!confirmar)
+    // Recorre el carrito y genera el HTML
+    articulosCarrito.forEach(orientacion => {
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${orientacion.titulo}</td>
+            <td>${orientacion.precio}</td>
+            <td>${orientacion.cantidad}</td>
+            <td>
+                <a href="#" class="borrar-curso" data-id="${orientacion.id}"> X </a>
+            </td>
+        `;
+
+        contenedorCarrito.appendChild(row);
+    });
 
 
-    /*Paso 2 : mostrar presupuesto */
+    sincronizarStorage();
 
-    alert("Tu total es de" + miCarrito.calcularTotal())
+}
+
+function sincronizarStorage() {
+    localStorage.setItem('carrito', JSON.stringify(articulosCarrito));
+}
+
+
+function limpiarHTML() {
+
+    while(contenedorCarrito.firstChild) {
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+    }
+}
+
+function leerCarrito () {
+    const data = localStorage.getItem("carrito")
+    if (data)  {
+        const articulosCarrito = JSON.parse(data)
+        articulosCarrito.forEach(orientacion => {
+
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${orientacion.titulo}</td>
+                <td>${orientacion.precio}</td>
+                <td>${orientacion.cantidad}</td>
+                <td>
+                    <a href="#" class="borrar-curso" data-id="${orientacion.id}"> X </a>
+                </td>
+            `;
+    
+            contenedorCarrito.appendChild(row);
+        });
+
+    }
+}
+
+leerCarrito()

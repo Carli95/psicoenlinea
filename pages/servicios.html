@@ -27,7 +27,6 @@
         <span class="navbar-toggler-icon"></span>
         <!--boton hamburguesa-->
       </button>
-
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
         <ul class="navbar-nav ml-auto">
@@ -49,6 +48,31 @@
           </li>
         </ul>
       </div>
+      <div>
+        <div class="row carro">
+            <div class="two columns u-pull-right">
+                <ul style="list-style: none;">
+                    <li class="submenu">
+                        <i class="fas fa-shopping-cart"></i>
+                            <div id="carrito">                                  
+                                    <table id="lista-carrito" class="u-full-width">
+                                        <thead>
+                                            <tr>
+                                                <th>Nombre</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>  
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
     </nav>
   </header>
   <!-- FINAL HEADER -->
@@ -136,6 +160,44 @@
     </div>
   </div>
   <!-- FINAL SERVICIOS -->
+
+  <div class="pricing-header px-3 py-3 pt-md-3 pb-md-4 mx-auto text-center">
+    <h1 class="fs-1 text">Reserva tu proceso de <br>orientación vocacional</h1>
+    <p class="lead" >Quickly build an effect default Bootstrap components and utilities with little customization.</p>
+  </div>
+
+  <div class="card-deck mb-1 "  id="lista-orientacion">
+    <div class="card mb-4 shadow-sm producto-orientacion" >
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Proceso Corto</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$650</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>20 users included</li>
+          <li>10 GB of storage</li>
+          <li>Priority email support</li>
+          <li>Help center access</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary comprar" value="1" >Comprar</button>
+      </div>
+    </div>
+    <div class="card mb-4 shadow-sm producto-orientacion">
+      <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Proceso Largo</h4>
+      </div>
+      <div class="card-body">
+        <h1 class="card-title pricing-card-title">$850</h1>
+        <ul class="list-unstyled mt-3 mb-4">
+          <li>30 users included</li>
+          <li>15 GB of storage</li>
+          <li>Phone and email support</li>
+          <li>Help center access</li>
+        </ul>
+        <button type="button" class="btn btn-lg btn-block btn-primary comprar" value="2" >Comprar</button>
+      </div>
+    </div>
+  </div>
 
   <!-- COMIENZO TESTIMONIOS -->
   <div id="testimonials">

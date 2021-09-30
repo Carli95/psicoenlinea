@@ -423,6 +423,20 @@ footer .col-contacto ul {
     padding-top: 5rem;
 }
 
+
+.pricing-header {
+    max-width: 700px;
+
+  }
+  
+  .card-deck .card {
+    min-width: 220px;
+  }
+  
+  #tex-compra {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* SECION 404 */
 
 .container-404 {
@@ -446,10 +460,48 @@ footer .col-contacto ul {
 
 /* SECION MODAL */
 
-.modal {
-    display: inline-block;
-    justify-content: center;
+#suscripcion_modal {
     background-color: #e2b0f2;
     width: 500px;
-    height: 200px;
+    height: 300px;
 }
+
+
+.carro{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.submenu {
+    position: relative;
+    padding-top: 10px;
+    i {
+        color: #6c757d;
+        width: 1.25rem;
+    }
+    #carrito {
+        display: none;
+    }
+    &:hover #carrito {
+        display: block;
+        position: absolute;
+        right:0;
+    
+        top:100%;
+        z-index: 1;
+        background-color: white;
+        padding: 20px;
+        min-height: 400px;
+        min-width: 300px;
+    }
+}
+
+
+#lista-orientacion {
+    width: 600px;
+    text-align: center; 
+}
+
+.producto-orientacion {
+}
+
