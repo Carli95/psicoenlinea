@@ -64,9 +64,12 @@
         Contacto
       </div>
     </h1>
+    <h3 class="titulo dispay-4 mb-4 text-left">
+      <div class="title-sesion" > Agenda tu primer sesión</div>
+    </h3>
     <div class="row align-items-center form-co">
       <div class="col my-3">
-        <form action="" method="POST" class="card shadow">
+        <form action="" method="POST" class="card shadow" id="formTurno">
           <input type="hidden"> <input type="hidden">
           <div class="card-body">
             <div class="form-row">
@@ -85,25 +88,21 @@
                     name="telefono" required="required" autocomplete="off" value="" class="form-control  "></div>
               </div>
               <div class="col">
-                <div class="form-group"><label for="edad">Edad:</label> <input type="text" id="edad" name="telefono"
-                    required="required" autocomplete="off" value="" class="form-control  "></div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col">
                 <label for="inputState">Modalidad</label>
-                <select id="inputState" class="form-control">
+                <select id="modalidad" class="form-control">
                   <option selected>Llamada</option>
                   <option>Video llamada</option>
                 </select>
               </div>
+            </div>
+            <div class="form-row">
               <div class="col">
-                <label for="inputState">Horario</label>
-                <select id="inputState" class="form-control">
-                  <option selected>9 a 12hs</option>
-                  <option>12 a 18hs</option>
-                  <option>18 a 22hs</option>
-                </select>
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="cita" class="form-control">
+              </div>
+              <div class="col">
+                <label for="horario">Horario</label>
+                <input type="time" id="horario" name="horario" class="form-control">
               </div>
             </div>
             <br>
@@ -160,10 +159,24 @@
       </div>
     </div>
   </footer>
+  <div class="modal fade" id="form_contacto" tabindex="-1" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Su sesión fue reservada</h5>
+        </div>
+        <div class="modal-body">
+          <span id="suscripcion_modal_nombre"></span> Para modificaciones puede comunicarse a
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--FINAL FOOTER-->
-  <script src="../js/solicitarTurno.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  <script src="../js/turnocontacto.js" ></script>
+  <script src="../js/jquery3.6min.js">
     </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
