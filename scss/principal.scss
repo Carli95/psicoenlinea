@@ -274,13 +274,12 @@ a {
         font-family: 'Roboto', sans-serif;
         font-size: $h4;
     }
-    .texto-blog {
-        font-family: 'Roboto', sans-serif;
-    }
 }
 
-
-
+.texto-blog {
+    font-family: 'Roboto', sans-serif;
+    display: none;
+}
 
 .btn-blog {
     color: #212529;

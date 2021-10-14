@@ -7344,8 +7344,10 @@ a {
   .blog .blog__title {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em; }
-  .blog .texto-blog {
-    font-family: 'Roboto', sans-serif; }
+
+.texto-blog {
+  font-family: 'Roboto', sans-serif;
+  display: none; }
 
 .btn-blog {
   color: #212529; }

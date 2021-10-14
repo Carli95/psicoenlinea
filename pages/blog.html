@@ -60,6 +60,12 @@
         <p class="lead text-muted blog__title">En esta seccion podras encontras notas o articulos que pueden ayudarte en
           tu dia a dia o en tu proceso de auto descubrimiento</p>
       </div>
+      <div class="search" >
+        <form action="" id="buscador">
+          <input type="text" placeholder="Buscar" name="search" id="busqueda">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
     </section>
     <div class="album py-5 bg-light">
       <div class="container">
@@ -78,8 +84,12 @@
                   en el área social, laboral, familiar u otras áreas.⁣⁣</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <button type="button" class="btn btn-primary btn-sm"><a class="btn-blog"
-                        href="https://www.instagram.com/p/CHJOlpEBMgr/?utm_medium=copy_link ">Ver mas</a></button>
+                    <button type="button" class="btn btn-primary btn-sm" id="show">
+                     Ver mas</button>
+                  </div>
+                  <div>
+                    <button type="button" class="btn btn-primary btn-sm" id="hide">
+                     Ver menos</button>
                   </div>
                   <small class="text-muted">Hace 3 dias</small>
                 </div>
