@@ -79,6 +79,7 @@ function carritoHTML() {
 
     sincronizarStorage();
 
+
 }
 
 function sincronizarStorage() {
@@ -116,3 +117,5 @@ function leerCarrito () {
 }
 
 leerCarrito()
+
+const vaciarCarritoBtn = localStorage.clear();
