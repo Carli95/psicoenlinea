@@ -7459,24 +7459,8 @@ footer .col-contacto ul {
 #tex-compra {
   font-family: 'Roboto', sans-serif; }
 
-/* SECION 404 */
-.container-404 {
-  text-align: center;
-  padding: 10rem;
-  margin: auto; }
-  .container-404 h1 {
-    font-size: 6rem; }
-  .container-404 p {
-    font-size: 1.75em; }
-  .container-404 .boton404 {
-    font-size: 1.5em;
-    font-family: 'Roboto', sans-serif; }
-
-/* SECION MODAL */
-#suscripcion_modal {
-  background-color: #e2b0f2;
-  width: 500px;
-  height: 300px; }
+.container-cards {
+  width: 500px; }
 
 .carro {
   margin-right: 0px;
@@ -7493,14 +7477,31 @@ footer .col-contacto ul {
   .submenu:hover #carrito {
     display: block;
     position: absolute;
-    right: 0;
     top: 100%;
     z-index: 1;
     background-color: white;
     padding: 20px;
-    min-height: 400px;
+    min-height: 250px;
     min-width: 300px; }
 
-#lista-orientacion {
-  width: 600px;
-  text-align: center; }
+.limpiar-carro {
+  border: solid 2px black;
+  height: 35px;
+  text-align: center;
+  font-size: 18px; }
+  .limpiar-carro a {
+    color: black;
+    font-family: 'Roboto', sans-serif; }
+
+/* SECION 404 */
+.container-404 {
+  text-align: center;
+  padding: 10rem;
+  margin: auto; }
+  .container-404 h1 {
+    font-size: 6rem; }
+  .container-404 p {
+    font-size: 1.75em; }
+  .container-404 .boton404 {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif; }

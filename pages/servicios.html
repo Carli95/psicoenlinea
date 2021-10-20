@@ -50,29 +50,29 @@
       </div>
       <div>
         <div class="row carro">
-            <div class="two columns u-pull-right">
+            <div class="">
                 <ul style="list-style: none;">
                     <li class="submenu">
                         <i class="fas fa-shopping-cart"></i>
                             <div id="carrito">                                  
                                     <table id="lista-carrito" class="u-full-width">
                                         <thead>
-                                            <tr>
-                                                <th>Nombre</th>
-                                                <th>Precio</th>
-                                                <th>Cantidad</th>
-                                                <th></th>
+                                            <tr class="d-flex bd-highlight text-center">
+                                                <td class="p-2 flex-fill bd-highlight">Producto</td>
+                                                <td class="p-2 flex-fill bd-highlight">Precio</td>
+                                                <td></td>
                                             </tr>
                                         </thead>
                                         <tbody></tbody>
                                     </table>  
-                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
+                                    <div class="limpiar-carro"><a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a></div>
                             </div>
                     </li>
                 </ul>
             </div>
         </div> 
     </div>
+    
     </nav>
   </header>
   <!-- FINAL HEADER -->
@@ -165,8 +165,8 @@
     <h1 class="fs-1 text">Reserva tu proceso de <br>orientación vocacional</h1>
     <p class="lead" >Quickly build an effect default Bootstrap components and utilities with little customization.</p>
   </div>
-
-  <div class="card-deck mb-1 "  id="lista-orientacion">
+  <div class="container-cards d-flex justify-content-center"> 
+  <div class="card-deck"  id="lista-orientacion">
     <div class="card mb-4 shadow-sm producto-orientacion" >
       <div class="card-header">
         <h4 class="my-0 font-weight-normal">Proceso Corto</h4>
@@ -189,16 +189,16 @@
       <div class="card-body">
         <h1 class="card-title pricing-card-title">$850</h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li>30 users included</li>
-          <li>15 GB of storage</li>
-          <li>Phone and email support</li>
+          <li>20 users included</li>
+          <li>10 GB of storage</li>
+          <li>Priority email support</li>
           <li>Help center access</li>
         </ul>
         <button type="button" class="btn btn-lg btn-block btn-primary comprar" value="2" >Comprar</button>
       </div>
     </div>
   </div>
-
+  </div>
   <!-- COMIENZO TESTIMONIOS -->
   <div id="testimonials">
 
@@ -263,24 +263,25 @@
     <div class="container">
       <h5 class="suscripcion__title text-center pt-2 mb-4">
         SUSCRIBITE PARA RECIBIR NOVEDADES</h5>
-      <form class="">
+      <form class="" id="miFormulario">
         <div class="row align-items-end">
 
           <div class="col-md-5">
             <div class="form-group">
-              <input placeholder="Nombre" type="text" required="required" class="form-control" autocomplete="Off" />
+              <input placeholder="Nombre" id="suscripcion_nombre" type="text" required="required" class="form-control"
+                autocomplete="Off" />
             </div>
           </div>
 
           <div class="col-md-5">
             <div class="form-group">
-              <input placeholder="Email" type="email" required="required" class="form-control" autocomplete="Off" />
+              <input placeholder="Email" id="suscripcion_email" type="email" required="required" class="form-control"
+                autocomplete="Off" />
             </div>
           </div>
-
           <div class="col-md-2">
             <div class="form-group">
-              <button type="submit" class="btn-sus btn btn-block ">
+              <button type="submit" class="btn-sus btn btn-block" id="suscripcion">
                 <i class="far fa-envelope"></i>
                 Suscribirme
               </button>
@@ -316,6 +317,21 @@
       </div>
     </div>
   </footer>
+  <div class="modal fade" id="suscripcion_modal" tabindex="-1" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">GRACIAS POR SUSCRIBIRSE</h5>
+        </div>
+        <div class="modal-body">
+          <span id="suscripcion_modal_nombre"></span> Proximamente estara recibiendo información
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--FINAL FOOTER-->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -324,6 +340,7 @@
     integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
   </script>
   <script src="../js/testcarrito.js"> </script>
+  <script src="../js/suscripcionevento.js"></script>
 </body>
 
 </html>

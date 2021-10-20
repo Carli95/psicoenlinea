@@ -17,13 +17,13 @@ document.getElementById("formTurno").addEventListener("submit", (e) => {
 
         const raw = JSON.stringify({
             "eventName": "suscripcion_form",
-            "email": email,
+            "email": '"'+email+'"',
             "attributes": {
-                "nombre": nombre ,
-                "telefono" : telefono ,
-                "modalidad" : modalidad ,
-                "fecha" : fecha,
-                "horario" : horario
+                "nombre": '"'+nombre+'"' ,
+                "telefono" : '"'+telefono+'"' ,
+                "modalidad" : '"'+modalidad+'"' ,
+                "fecha" : '"'+fecha+'"',
+                "horario" : '"'+horario+'"'
             }
         });
 
@@ -38,10 +38,7 @@ document.getElementById("formTurno").addEventListener("submit", (e) => {
             .then(result => {
                 $("#nombre").innerHTML = nombre.value;
                 $("#form_contacto").modal('show')
-            
-        
-                nombre.value = "";
-                email.value = "";
+                document.getElementById("formTurno").reset()
             })
             .catch(error => console.log('error', error));
 

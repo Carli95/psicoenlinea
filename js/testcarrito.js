@@ -24,6 +24,13 @@ carrito.addEventListener(`click` , (e) => {
 }
 )
 
+vaciarCarritoBtn.addEventListener('click', () => {
+        
+    articulosCarrito = []; 
+    
+    limpiarHTML(); 
+
+ })
 
 
 function leerDatosOrientacion(orientacion) {
@@ -32,14 +39,12 @@ function leerDatosOrientacion(orientacion) {
         titulo: orientacion.querySelector('h4').textContent,
         precio: orientacion.querySelector('h1').textContent,
         id: orientacion.querySelector('button').value,
-        cantidad: 1
     }
 
     const existe = articulosCarrito.some(orientacion => orientacion.id === infoOrientacion.id);
     if (existe) {
         articulosCarrito = articulosCarrito.map(orientacion => {
             if (orientacion.id === orientacion.id) {
-                orientacion.cantidad++;
             }
             return orientacion
         });
@@ -67,9 +72,8 @@ function carritoHTML() {
         row.innerHTML = `
             <td>${orientacion.titulo}</td>
             <td>${orientacion.precio}</td>
-            <td>${orientacion.cantidad}</td>
             <td>
-                <a href="#" class="borrar-curso" data-id="${orientacion.id}"> X </a>
+                <a href="#" class="borrar-curso" data-id="${orientacion.id}"><i class="fas fa-times-circle"></i> </a>
             </td>
         `;
 
@@ -104,9 +108,8 @@ function leerCarrito () {
             row.innerHTML = `
                 <td>${orientacion.titulo}</td>
                 <td>${orientacion.precio}</td>
-                <td>${orientacion.cantidad}</td>
                 <td>
-                    <a href="#" class="borrar-curso" data-id="${orientacion.id}"> X </a>
+                    <a href="#" class="borrar-curso" data-id="${orientacion.id}"><i class="fas fa-times-circle"></i> </a>
                 </td>
             `;
     
@@ -118,4 +121,4 @@ function leerCarrito () {
 
 leerCarrito()
 
-const vaciarCarritoBtn = localStorage.clear();
+//const vaciarCarritoBtn = localStorage.clear();

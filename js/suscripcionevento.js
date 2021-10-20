@@ -11,9 +11,9 @@ document.getElementById("miFormulario").addEventListener('submit', function (e) 
 
         const raw = JSON.stringify({
             "eventName": "suscripcion_form",
-            "email": email,
+            "email": '"'+email+'"',
             "attributes": {
-                "nombre": nombre
+                "nombre": '"'+nombre+'"'
             }
         });
 
@@ -31,6 +31,7 @@ document.getElementById("miFormulario").addEventListener('submit', function (e) 
         
                 nombre.value = "";
                 email.value = "";
+                document.getElementById("miFormulario").reset()
             })
             .catch(error => console.log('error', error));
 
